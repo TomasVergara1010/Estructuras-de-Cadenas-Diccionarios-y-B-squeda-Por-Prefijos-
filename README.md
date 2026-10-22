@@ -34,7 +34,14 @@ El sistema encuentra las frutas cuyo nombre comienza con el prefijo indicado y m
 Por ejemplo, con el prefijo m, pueden aparecer frutas como mango, manzana, mandarina, mora, melón, maracuyá y melocotón. La fruta seleccionada y el orden de las sugerencias pueden variar según la ejecución.
 
 La aplicación demuestra cómo el Trie facilita las búsquedas por prefijo y cómo el diccionario permite consultar el precio de una fruta por su nombre.
-Autores
 
-- Jhonatan Oquendo
-- Tomás Vergara
+## 👥 Integrantes
+
+| Integrante | GitHub | 
+|---|---|
+| **Tomás Vergara** | [@TomasVergara1010](https://github.com/TomasVergara1010) | 
+| **Jhonatan Oquendo** | [@Tatan072](https://github.com/Tatan072) | 
+
+<div align="center">
+  
+📚 Proyecto académico · Asignatura **Estructuras de Datos**
