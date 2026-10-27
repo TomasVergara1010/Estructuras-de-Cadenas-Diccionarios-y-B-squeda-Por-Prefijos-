@@ -1,40 +1,45 @@
 # Estructuras-de-Cadenas-Diccionarios-y-B-squeda-Por-Prefijos-
 
-🍎 Sistema de Autocompletado para una Frutería
+Buscador de productos de Amazon por prefijo
 Descripción
-El proyecto consiste en desarrollar una búsqueda de frutas para la caja registradora de una pequeña frutería. Al escribir las primeras letras de una fruta, el sistema encuentra sugerencias y permite consultar el precio asociado a una fruta.
+Este proyecto implementa un buscador de productos de Amazon que utiliza una estructura de datos Trie para encontrar nombres de productos a partir de las primeras letras que escriba el usuario. Cuando encuentra coincidencias, selecciona una sugerencia al azar y muestra información disponible del producto, como el precio con descuento y la calificación.
 
-El objetivo es aplicar cadenas, diccionarios y árboles de prefijos (Trie) para resolver una necesidad práctica mediante estructuras de datos.
-Dataset
-Los datos utilizados corresponden a un catálogo de frutas y sus precios, definidos dentro del código del proyecto. No se utiliza un dataset externo.
+El proyecto está desarrollado en Python y se ejecuta en Google Colab.
+Objetivos
+- Cargar un conjunto de datos de productos de Amazon.
+- Implementar una estructura de datos Trie.
+- Insertar los nombres de los productos en el Trie.
+- Buscar productos a partir de un prefijo.
+- Mostrar una sugerencia aleatoria y algunos de sus datos.
+Tecnologías y herramientas
+- Python
+- Google Colab
+- KaggleHub, para descargar el conjunto de datos.
+- Trie, estructura de datos utilizada para la búsqueda por prefijos.
+Conjunto de datos
 
-El catálogo incluye nombres de frutas como manzana, mango, mandarina, maracuyá, mora, melón y melocotón, junto con sus precios en pesos colombianos (COP).
-Tecnologías
-- Python 3: lenguaje de programación.
-- Diccionarios (dict): almacenan los nodos del Trie y relacionan cada fruta con su precio.
-- random: permite seleccionar aleatoriamente una sugerencia en la simulación. Es una librería incluida en Python, por lo que no requiere instalación adicional.
-- Google Colab : entorno recomendado para ejecutar el archivo del proyecto.
-Implementación
-El proyecto utiliza dos estructuras de datos principales:
-Árbol de prefijos (Trie)
-Se insertan los nombres de las frutas carácter por carácter. Cuando se proporciona un prefijo, el árbol localiza el nodo correspondiente y recorre las ramas que comparten esas letras para obtener las coincidencias.
-Diccionario de precios
-Se utiliza un diccionario que relaciona el nombre de cada fruta con su precio. Una vez obtenida una sugerencia, el sistema consulta el diccionario para mostrar el precio correspondiente.
-Flujo de funcionamiento
-1. Se insertan las frutas en el Trie.
-2. Se almacenan sus precios en un diccionario.
-3. Se busca un prefijo configurado en el código.
-4. Se muestran las frutas que coinciden con ese prefijo.
-5. Se selecciona una sugerencia al azar para simular la elección.
-6. Se consulta y muestra el precio de la fruta seleccionada
+El notebook descarga el conjunto de datos amazon-sales-dataset de Kaggle, publicado por karkavelrajaj, mediante KaggleHub. Después carga el archivo amazon.csv y utiliza la columna product_name para construir el buscador.
+¿Cómo funciona?
+1. Descarga los datos de Amazon y carga el archivo CSV con Pandas.
+2. Obtiene los nombres de los productos que no están vacíos.
+3. Crea un Trie e inserta los nombres de los productos en minúsculas.
+4. Solicita al usuario las primeras letras del producto que desea buscar.
+5. Busca todos los productos cuyos nombres comienzan con ese prefijo.
+6. Si hay coincidencias, elige una al azar y muestra su nombre, precio con descuento y calificación cuando esos datos están disponibles.
+7. Si no hay coincidencias, informa que no se encontraron productos con ese prefijo.
+Cómo ejecutar el proyecto
+1. Abre el notebook en Google Colab.
+2. Ejecuta las celdas en orden, desde la primera hasta la última.
+3. Cuando el programa lo solicite, escribe las primeras letras del nombre de un producto.
+4. Revisa las coincidencias y la sugerencia que muestra el programa.
+El notebook descarga el conjunto de datos durante la ejecución. Se necesita conexión a internet y un entorno que permita instalar o utilizar las dependencias necesarias.
+Ejemplo de uso
+Si el usuario escribe un prefijo como sams, el programa busca nombres de productos que comiencen con esas letras. Si encuentra coincidencias, selecciona una al azar y muestra los detalles disponibles.
 
-Resultados
-El sistema encuentra las frutas cuyo nombre comienza con el prefijo indicado y muestra las coincidencias. Después selecciona una sugerencia al azar y consulta su precio en el diccionario.
-
-Por ejemplo, con el prefijo m, pueden aparecer frutas como mango, manzana, mandarina, mora, melón, maracuyá y melocotón. La fruta seleccionada y el orden de las sugerencias pueden variar según la ejecución.
-
-La aplicación demuestra cómo el Trie facilita las búsquedas por prefijo y cómo el diccionario permite consultar el precio de una fruta por su nombre.
-
+El resultado depende de los productos presentes en el conjunto de datos.
+Estructura del proyecto
+- Caso_Amazon.ipynb: notebook con la descarga y carga de datos, la implementación del Trie y el buscador interactivo.
+  
 ## 👥 Integrantes
 
 | Integrante | GitHub | 
